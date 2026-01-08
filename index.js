@@ -7,7 +7,7 @@ const pItems = [
 			"My personal introduction project in software dev. This was a Code along/Personal Project I have been working on at Home.",
 	},
 	{
-		title: "Personal Portfolio Static Web App",
+		title: "Static Web App",
 		url: "https://mango-forest-05e2a0210.4.azurestaticapps.net",
 		description: "My First static Web App. It is a Live website using Asure.",
 	},
@@ -28,15 +28,21 @@ const pItems = [
 const dragonDiv = document.getElementById("dragon");
 
 pItems.forEach((pitem) => {
+	//Declaring Variables. I used 2 breaks in order to create the space on the app.
+
 	const titleText = pitem.title;
 	const urlText = pitem.url;
 	const descriptionText = pitem.description;
 	const br = document.createElement("br");
 	const br1 = document.createElement("br");
 
+	//creation of the title element
+
 	const titleDiv = document.createElement("div");
 	titleDiv.classList.add("dragon-title");
 	titleDiv.textContent = titleText;
+
+	//creation of the URL element. Using an anchor and Target _blank
 
 	const urlDiv = document.createElement("a");
 	urlDiv.setAttribute("href", urlText);
@@ -44,11 +50,13 @@ pItems.forEach((pitem) => {
 	urlDiv.classList.add("dragon-url");
 	urlDiv.textContent = urlText;
 
+	//creation of the description element
+
 	const descriptionDiv = document.createElement("div");
 	descriptionDiv.classList.add("dragon-description");
 	descriptionDiv.textContent = descriptionText;
 
-	titleDiv.append();
+	//Methods
 
 	dragonDiv.appendChild(titleDiv);
 
