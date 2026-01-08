@@ -49,6 +49,45 @@
 
             </div>
         </section>
+        <section>
+            <blockquote>
+                <h4>If you would Like to Contact me, please fill out the form below.</h4>
+            </blockquote>
+            <form method="Post">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="first-name">First Name:</label>
+                        <input id="first-name" type="text" placeholder="Enter your first name..." required />
+                    </div>
+                    <div class="input-row">
+                        <label for="last-name">Last Name:</label>
+                        <input id="last-name" type="text" placeholder="Enter your last name..." required />
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="subject">Message Type:</label>
+                        <select id="subject">
+                            <option value="because Inquiry">Business Inquiry</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="general question">General Question</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message:</label>
+                    <div>
+                        <textarea name="message" id="message" placeholder="Enter your message..."></textarea>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input id="email" type="text" placeholder="Enter your email..." required />
+                </div>
+                <button>Contact Me</button>
+            </form>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024</p>
