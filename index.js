@@ -21,7 +21,7 @@ const pItems = [
 		title: "Resume App",
 		url: "https://github.com/JarvisAppleSlice/Resume-App.git",
 		description:
-			"This was another introductory App Made in the introduction of the Software development class at BATC.",
+			"This was another introductory App Made in the introduction of the Software development class at BATC. Lots of fun for me, getting an idea of how software development works.",
 	},
 ];
 
@@ -32,6 +32,7 @@ pItems.forEach((pitem) => {
 	const urlText = pitem.url;
 	const descriptionText = pitem.description;
 	const br = document.createElement("br");
+	const br1 = document.createElement("br");
 
 	const titleDiv = document.createElement("div");
 	titleDiv.classList.add("dragon-title");
@@ -39,6 +40,7 @@ pItems.forEach((pitem) => {
 
 	const urlDiv = document.createElement("a");
 	urlDiv.setAttribute("href", urlText);
+	urlDiv.target = "_blank";
 	urlDiv.classList.add("dragon-url");
 	urlDiv.textContent = urlText;
 
@@ -46,11 +48,15 @@ pItems.forEach((pitem) => {
 	descriptionDiv.classList.add("dragon-description");
 	descriptionDiv.textContent = descriptionText;
 
-	titleDiv.appendChild(urlDiv);
+	titleDiv.append();
 
 	dragonDiv.appendChild(titleDiv);
+
+	dragonDiv.appendChild(urlDiv);
 
 	dragonDiv.appendChild(descriptionDiv);
 
 	dragonDiv.appendChild(br);
+
+	dragonDiv.appendChild(br1);
 });
