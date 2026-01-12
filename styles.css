@@ -1,0 +1,164 @@
+body {
+	font-family: "Roboto Mono", monospace;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
+
+h1,
+h2,
+h3 {
+	font-family: "Boldonse", system-ui;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/*Summary*/
+/* .sum {
+	font-family: "Edu NSW ACT Cursive", cursive;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+} */
+
+/*Title*/
+#title {
+	font-family: "Boldonse", system-ui;
+	font-weight: 400;
+	font-style: normal;
+}
+
+header.name {
+	position: sticky;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	z-index: 10;
+	width: 50%;
+	max-width: 500px;
+	max-height: 50px;
+	margin: auto;
+	padding: 1rem 2rem;
+	align-items: center;
+	border: 1px solid #000;
+	border-radius: 50px;
+	backdrop-filter: blur(50px);
+	transform: translateY(10px);
+}
+
+/*Social Links*/
+.socials {
+	position: sticky;
+	width: 50%;
+	max-width: 1200px;
+	max-height: 50px;
+	margin: 0 auto;
+	padding: 1rem 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* border: 1px solid #000;
+	border-radius: 50px; */
+	transform: translateY(10px);
+	margin-top: 2rem;
+}
+
+.links {
+	position: sticky;
+	font-size: 1rem;
+	text-decoration: none;
+	color: olive;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	margin-right: 1rem;
+}
+
+nav ul li a {
+	color: olive;
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	color: rgb(76, 108, 12);
+	font-size: 1rem;
+	text-decoration: underline;
+}
+
+/* Bio Card */
+.bio {
+	width: 80%;
+	max-width: 1000px;
+	height: auto;
+	display: auto;
+	margin: 4rem auto;
+	background-color: cadetblue;
+	border: 5px #000;
+	border-radius: 15px;
+	box-shadow: 0 0 10 0 #000;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.bio h2 {
+	font-size: 2rem;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	max-width: 500px;
+	height: 100px;
+	display: flex;
+	margin: 4rem auto;
+	margin-bottom: auto;
+}
+
+.bio p {
+	border: 5px #000;
+	border-radius: 20px;
+	/* margin: 10px; */
+	background-color: beige;
+	/* justify-content: center;
+	align-items: center; */
+	padding: 2rem;
+	/* display: flex;
+	flex-direction: column; */
+}
+
+.bio img {
+	border: 10px #000;
+	border-radius: 20px;
+	margin: 10px;
+	background-color: beige;
+	width: 300px;
+	height: auto;
+	display: flex;
+	margin: auto;
+}
+
+.sum {
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-family: "Edu NSW ACT Cursive", cursive;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+}
+
+#dragon {
+}
