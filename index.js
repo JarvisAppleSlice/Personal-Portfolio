@@ -42,6 +42,9 @@ pItems.forEach((pitem) => {
 	titleDiv.classList.add("dragon-title");
 	titleDiv.textContent = titleText;
 
+	const projectDetailsDiv = document.createElement("div");
+	projectDetailsDiv.classList.add("projectdetails");
+
 	//creation of the URL element. Using an anchor and Target _blank
 
 	const urlDiv = document.createElement("a");
@@ -56,13 +59,25 @@ pItems.forEach((pitem) => {
 	descriptionDiv.classList.add("dragon-description");
 	descriptionDiv.textContent = descriptionText;
 
+	projectDetailsDiv.appendChild(descriptionDiv);
+
+	projectDetailsDiv.appendChild(urlDiv);
+
 	//Methods
 
 	dragonDiv.appendChild(titleDiv);
 
-	dragonDiv.appendChild(urlDiv);
+	// dragonDiv.appendChild(descriptionDiv);
 
-	dragonDiv.appendChild(descriptionDiv);
+	// dragonDiv.appendChild(urlDiv);
+
+	titleDiv.addEventListener("click", () => {
+		titleDiv.classList.toggle("active");
+		projectDetailsDiv.classList.toggle("actve");
+		console.log(projectDetailsDiv.classList);
+	});
+
+	dragonDiv.appendChild(projectDetailsDiv);
 
 	dragonDiv.appendChild(br);
 

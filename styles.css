@@ -159,3 +159,76 @@ nav ul li a:hover {
 	font-weight: 600;
 	font-style: normal;
 }
+
+/*Projects section*/
+
+#projects {
+	padding: 4rem;
+}
+
+.projects {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.projects h2 {
+	margin: 0rem auto 2rem auto;
+	max-width: 600px;
+	text-align: center;
+}
+
+.dragon-title {
+	background-color: beige;
+	border-radius: 20px;
+	color: black;
+	cursor: pointer;
+	padding: 15px;
+	width: auto;
+	border: none;
+	text-align: center;
+	outline: none;
+	font-size: 20px;
+	transition: background-color 0.5s ease;
+}
+
+.dragon-title:hover {
+	background-color: rgb(169, 169, 152);
+}
+
+.dragon-title.active {
+	background-color: rgb(169, 169, 152);
+	font-weight: bold;
+}
+
+/*Hidden items*/
+
+.projectdetails {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.25s ease;
+	background-color: beige;
+	font-weight: 300;
+	margin: 10px;
+}
+.projectdetails.active {
+	max-height: 100px;
+}
+
+/* .dragon-url {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.25s ease;
+	background-color: beige;
+	font-weight: 200;
+	margin: 10px;
+}
+.dragon-url.active {
+	max-height: 100 px;
+}
+
+.dragon-url:hover {
+	background-color: rgb(169, 169, 152);
+} */
