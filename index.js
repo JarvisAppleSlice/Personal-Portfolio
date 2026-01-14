@@ -71,13 +71,13 @@ pItems.forEach((pitem) => {
 
 	// dragonDiv.appendChild(urlDiv);
 
+	dragonDiv.appendChild(projectDetailsDiv);
+
 	titleDiv.addEventListener("click", () => {
 		titleDiv.classList.toggle("active");
-		projectDetailsDiv.classList.toggle("actve");
-		console.log(projectDetailsDiv.classList);
+		descriptionDiv.classList.toggle("active");
+		urlDiv.classList.toggle("active");
 	});
-
-	dragonDiv.appendChild(projectDetailsDiv);
 
 	dragonDiv.appendChild(br);
 
