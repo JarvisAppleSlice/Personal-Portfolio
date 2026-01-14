@@ -1,0 +1,32 @@
+{
+	"name": "personal-portfolio",
+	"version": "1.0.0",
+	"description": "",
+	"homepage": "https://github.com/JarvisAppleSlice/Personal-Portfolio#readme",
+	"bugs": {
+		"url": "https://github.com/JarvisAppleSlice/Personal-Portfolio/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JarvisAppleSlice/Personal-Portfolio.git"
+	},
+	"license": "ISC",
+	"author": "",
+	"type": "commonjs",
+	"main": "index.js",
+	"scripts": {
+		"dev": "vite"
+	},
+	"dependencies": {
+		"esbuild": "^0.27.2",
+		"fdir": "^6.5.0",
+		"nanoid": "^3.3.11",
+		"picocolors": "^1.1.1",
+		"picomatch": "^4.0.3",
+		"postcss": "^8.5.6",
+		"rollup": "^4.55.1",
+		"source-map-js": "^1.2.1",
+		"tinyglobby": "^0.2.15",
+		"vite": "^7.3.1"
+	}
+}
