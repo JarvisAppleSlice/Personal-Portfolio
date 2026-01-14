@@ -75,6 +75,7 @@ pItems.forEach((pitem) => {
 
 	titleDiv.addEventListener("click", () => {
 		titleDiv.classList.toggle("active");
+		// projectDetailsDiv.classList.toggle("active");
 		descriptionDiv.classList.toggle("active");
 		urlDiv.classList.toggle("active");
 	});
