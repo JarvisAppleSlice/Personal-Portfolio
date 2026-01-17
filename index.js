@@ -5,23 +5,28 @@ const pItems = [
 		url: "https://github.com/JarvisAppleSlice/html-portfolio.git",
 		description:
 			"My personal introduction project in software dev. This was a Code along/Personal Project I have been working on at Home.",
+		viewAt: "-View On GitHub-",
 	},
 	{
 		title: "Static Web App",
 		url: "https://mango-forest-05e2a0210.4.azurestaticapps.net",
-		description: "My First static Web App. It is a Live website using Asure.",
+		description:
+			"My First static Web App. It is a Live website using Asure. This project is a current Work in Progress.",
+		viewAt: "-View Website-",
 	},
 	{
 		title: "Weather App",
 		url: "https://github.com/JarvisAppleSlice/Weather-App.git",
 		description:
 			"This was a Code along Weather app build. This was lots of fun because there was alot of troubleshooting involved.",
+		viewAt: "-View On GitHub-",
 	},
 	{
 		title: "Resume App",
 		url: "https://github.com/JarvisAppleSlice/Resume-App.git",
 		description:
 			"This was another introductory App Made in the introduction of the Software development class at BATC. Lots of fun for me, getting an idea of how software development works.",
+		viewAt: "-View On GitHub-",
 	},
 ];
 
@@ -33,6 +38,7 @@ pItems.forEach((pitem) => {
 	const titleText = pitem.title;
 	const urlText = pitem.url;
 	const descriptionText = pitem.description;
+	const viewAttext = pitem.viewAt;
 	const br = document.createElement("br");
 	const br1 = document.createElement("br");
 
@@ -51,7 +57,7 @@ pItems.forEach((pitem) => {
 	urlDiv.setAttribute("href", urlText);
 	urlDiv.target = "_blank";
 	urlDiv.classList.add("dragon-url");
-	urlDiv.textContent = urlText;
+	urlDiv.textContent = viewAttext;
 
 	//creation of the description element
 
@@ -80,7 +86,7 @@ pItems.forEach((pitem) => {
 		urlDiv.classList.toggle("active");
 	});
 
-	dragonDiv.appendChild(br);
+	// dragonDiv.appendChild(br);
 
-	dragonDiv.appendChild(br1);
+	// dragonDiv.appendChild(br1);
 });
