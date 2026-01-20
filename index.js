@@ -90,3 +90,17 @@ pItems.forEach((pitem) => {
 
 	// dragonDiv.appendChild(br1);
 });
+
+
+class Testimonial {
+	constructor(params) {
+		super()
+		const {comment, rating, referenceId} = params;
+		this.comment = comment;
+		this.rating = rating;
+		this.referenceId = referenceId;
+	}
+	toString() {
+		return ``
+	}
+}
