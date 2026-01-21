@@ -18,7 +18,7 @@
     <header class="name">
         <h1>Samuel's Portfolio</h1>
     </header>
-    <main id="#main">
+    <main id="main">
         <section>
             <div class="socials">
                 <div class="links">
@@ -33,7 +33,7 @@
                 </nav>
             </div>
         </section>
-        <section id="#bio">
+        <section id="bio">
             <div class="bio">
                 <h2>Sam Jarvis</h2>
                 <img src="images/1.JPG" alt="Sam" width="100px" height="100px">
@@ -107,6 +107,38 @@
                 <!--Send Button-->
                 <button>Contact Me</button>
             </form>
+        </section>
+        <section id="reference-form">
+            <h2>Add a Reference</h2>
+            <form id="create-reference-form">
+                <h3></h3>
+                <fieldset>
+                    <legend>Reference Information</legend>
+                    <label>
+                        Name:<input type="text" name="name" required />
+                    </label>
+                    <label>
+                        Email:<input type="email" name="email" required />
+                    </label>
+                    <fieldset>
+                        <label>
+                            Company (Optional):<input type="text" name="company" />
+                        </label>
+                    </fieldset>
+                </fieldset>
+                <fieldset>
+                    <legend>Optional Testimonial</legend>
+                    <label>
+                        Comment:<textarea name="comment" rows="4"></textarea>
+                    </label>
+                    <label>
+                        Rating (1-5):<input type="number" name="rating" min="1" max="5" />
+                    </label>
+                    <p>Leave blank if you would rather not leave a testimonial.</p>
+                </fieldset>
+                <button type="submit">Submit</button>
+            </form>
+            <ul id="references-list"></ul>
         </section>
     </main>
     <footer>
