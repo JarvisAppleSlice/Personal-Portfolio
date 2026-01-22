@@ -121,8 +121,8 @@ class Reference extends DatabaseObject {
 		this.company = company;
 	}
 	toString() {
-		// return this.company ? `${this.name} (${this.company})` : this.name;
-		return `${this.name} (${this.company})`;
+		return this.company ? `${this.name} (${this.company})` : this.name;
+		// return `${this.name} (${this.company})`;
 	}
 }
 
@@ -145,12 +145,21 @@ class ReferenceDao {
 			email: "jason.b@blackbriar.com",
 			company: "Treadstone",
 		},
+		{
+			id: 4,
+			name: "Eren Yeager",
+			email: "rumblerumble.com",
+			company: "Survey Corps",
+		},
 	];
 	getAll() {
 		throw new Error("Not implemented");
 	}
 	create(reference) {
 		throw new Error("Not implemented");
+	}
+	update(reference) {
+		throw new Error("not implemented");
 	}
 }
 class TestimonialDao {
@@ -174,12 +183,21 @@ class TestimonialDao {
 			rating: 5,
 			rId: 3,
 		},
+		{
+			id: 4,
+			comment: "I did nothing wrong.",
+			rating: 5,
+			rId: 4,
+		},
 	];
 	getAll() {
 		throw new Error("Not implemented");
 	}
 	create(testimonial) {
 		throw new Error("Not implemented");
+	}
+	update(testimonial) {
+		throw new Error("not implemented");
 	}
 }
 
@@ -200,6 +218,10 @@ class LocalStorageReferenceDao extends ReferenceDao {
 		refs.push(reference);
 		this.database.setItem("references", JSON.stringify(refs));
 	}
+	// update(reference) {
+	// 	const existingReferences = this.getAll();
+	// 	this.database.setItem("references", JSON.stringify(existingReferences));
+	// }
 }
 
 class LocalStorageTestimonialDao extends TestimonialDao {
@@ -219,6 +241,10 @@ class LocalStorageTestimonialDao extends TestimonialDao {
 		testimonials.push(testimonial);
 		this.database.setItem("testimonials", JSON.stringify(testimonials));
 	}
+	// update(testimonial) {
+	// 	const existingTestimonials = this.getAll();
+	// 	this.database.setItem("testimonials", JSON.stringify(existingTestimonials));
+	// }
 }
 
 //Cookies
@@ -236,7 +262,7 @@ class CookiesReferenceDao extends ReferenceDao {
 	create(reference) {
 		const refs = this.getAll();
 		refs.push(reference);
-		document.cookie = `references=${JSON.stringify(refs)}; max-age=100`;
+		document.cookie = `references=${JSON.stringify(refs)}; max-age=10`;
 	}
 }
 
@@ -253,7 +279,7 @@ class CookiesTestimonialDao extends TestimonialDao {
 	create(testimonial) {
 		const refs = this.getAll();
 		testimonials.push(testimonial);
-		document.cookie = `testimonials=${JSON.stringify(testimonials)}; max-age=100`;
+		document.cookie = `testimonials=${JSON.stringify(testimonials)}; max-age=10`;
 	}
 }
 
@@ -271,28 +297,25 @@ class CreateTestimonial {
 			this.testimonialDao.create(testimonial);
 		}
 	}
-}
-
-// References List
-
-const referenceList = document.getElementById("references-list");
-const references = referenceDao.getAll();
-for (let i = 0; i < references.length; i++) {
-	const reference = references[i];
-	const referenceLi = document.createElement("li");
-	referenceLi.textContent = reference.toString();
-	referenceList.appendChild(referenceLi);
+	// 	update(reference) {
+	// 	const existingReferences = referenceDao.getAll();
+	// 	const indexToAdd = existingReferences.findIndex(
+	// 		(referenceInList) => referenceInList.name == reference.name,
+	// 	);
+	// 	existingReferences.splice(indexToAdd, 1, reference);
+	// 	this.database.setItem("references", JSON.stringify(existingReferences));
+	// }
 }
 
 //Switch between Session Storage and Cookies
 
 //Session
-const referenceDao = new LocalStorageReferenceDao();
-const testimonialDao = new LocalStorageTestimonialDao();
+// const referenceDao = new LocalStorageReferenceDao();
+// const testimonialDao = new LocalStorageTestimonialDao();
 
 //Cookies
-// const referenceDao = new CookiesReferenceDao();
-// const testimonialDao = new CookiesTestimonialDao();
+const referenceDao = new CookiesReferenceDao();
+const testimonialDao = new CookiesTestimonialDao();
 
 const CreateTestimonialService = new CreateTestimonial(referenceDao, testimonialDao);
 
@@ -332,3 +355,24 @@ form.addEventListener("submit", (event) => {
 
 	form.reset();
 });
+
+// References and Testimonials List Readout
+
+const referenceList = document.getElementById("references-list");
+const references = referenceDao.getAll();
+for (let i = 0; i < references.length; i++) {
+	const reference = references[i];
+	const referenceLi = document.createElement("li");
+	const testimonial = testimonials[i];
+	const testimonialLi = document.createElement("p");
+	referenceLi.textContent = reference.toString();
+	testimonialLi.textContent = testimonial.toString();
+	referenceList.appendChild(referenceLi);
+	referenceList.appendChild(testimonialLi);
+}
+
+function refreshPage() {
+	setTimeout(function () {
+		window.location.reload();
+	}, 10);
+}

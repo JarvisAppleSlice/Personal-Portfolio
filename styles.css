@@ -311,3 +311,45 @@ nav ul li a:hover {
 		max-height 1s,
 		ease-in-out 1s;
 }
+
+.reference-form {
+	background-color: beige;
+	margin: 15px;
+	border-radius: 5px;
+	/*Description text Style*/
+	/* display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: "Edu NSW ACT Cursive", cursive;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal; */
+}
+
+.reference-form p {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: auto;
+	font-family: "Edu NSW ACT Cursive", cursive;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.reference-form ul {
+	text-align: auto;
+	font-weight: 800;
+	background-color: beige;
+	margin: 15px;
+	border-radius: 5px;
+}
+
+footer {
+	background: #f6f6f6;
+	padding: 2rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

@@ -108,17 +108,17 @@
                 <button>Contact Me</button>
             </form>
         </section>
-        <section id="reference-form">
+        <section class="reference-form">
             <h2>Add a Reference</h2>
             <form id="create-reference-form">
                 <h3></h3>
                 <fieldset>
                     <legend>Reference Information</legend>
                     <label>
-                        Name:<input type="text" name="name" required />
+                        Name:<input type="text" name="name" required placeholder="Your name..." />
                     </label>
                     <label>
-                        Email:<input type="email" name="email" required />
+                        Email:<input type="email" name="email" required placeholder="Your email..." />
                     </label>
                     <fieldset>
                         <label>
@@ -129,15 +129,16 @@
                 <fieldset>
                     <legend>Optional Testimonial</legend>
                     <label>
-                        Comment:<textarea name="comment" rows="4"></textarea>
+                        Comment:<textarea name="comment" rows="4" placeholder="Enter your comment..."></textarea>
                     </label>
                     <label>
-                        Rating (1-5):<input type="number" name="rating" min="1" max="5" />
+                        Rating (1-5):<input type="number" name="rating" min="1" max="5" placeholder="..." />
                     </label>
                     <p>Leave blank if you would rather not leave a testimonial.</p>
                 </fieldset>
-                <button type="submit">Submit</button>
+                <button type="submit" onclick="refreshPage()">Submit</button>
             </form>
+            <h2>References:</h2>
             <ul id="references-list"></ul>
         </section>
     </main>
