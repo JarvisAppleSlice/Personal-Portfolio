@@ -108,7 +108,7 @@ class Testimonial extends DatabaseObject {
 		this.rId = rId;
 	}
 	toString() {
-		return `"${this.comment}" - ${this.rating}/5`;
+		return `"${this.comment}" ---- ${this.rating}/5`;
 	}
 }
 
@@ -185,7 +185,7 @@ class TestimonialDao {
 		},
 		{
 			id: 4,
-			comment: "I did nothing wrong.",
+			comment: "I did nothing wrong. And I'm sorry....",
 			rating: 5,
 			rId: 4,
 		},
@@ -236,8 +236,6 @@ class LocalStorageTestimonialDao extends TestimonialDao {
 	}
 	create(testimonial) {
 		const testimonials = this.getAll();
-		console.log("testimonials");
-		console.log(testimonials);
 		testimonials.push(testimonial);
 		this.database.setItem("testimonials", JSON.stringify(testimonials));
 	}
@@ -327,6 +325,7 @@ document.querySelector("h3").textContent = `Average Rating: ${average.toFixed(1)
 
 //Form submission
 const form = document.getElementById("create-reference-form");
+
 form.addEventListener("submit", (event) => {
 	event.preventDefault();
 	const formData = new FormData(form);
@@ -336,6 +335,7 @@ form.addEventListener("submit", (event) => {
 		email: formData.get("email"),
 		company: formData.get("company") || null,
 	};
+
 	const comment = formData.get("comment");
 	const rating = formData.get("rating");
 
