@@ -2,7 +2,7 @@ Personal Software Development Portfolio
 
 Overview:
 
-This project is a personal software development portfolio built to showcase projects, skills, and contact information using client-side web technologies. It serves as both a learning exercise and a centralized location to present ongoing software development work.
+This project is a personal software development portfolio built using concepts and skills learned in the Static Web App project. Built to shopwcase projects, skills, and contact information using client-side web technologies. It serves as both a learning exercise and a centralized location to present ongoing software development work.
 The application emphasizes interactive elements, clean organization, and practical front-end development patterns.
 
 Technologies Used:
