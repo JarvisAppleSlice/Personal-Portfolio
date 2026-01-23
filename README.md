@@ -34,3 +34,10 @@ Improved understanding of JavaScript-driven UI behavior
 Learned to persist data locally using browser storage
 Gained experience organizing front-end projects for maintainability
 Practiced iterative debugging and feature refinement
+
+Future Improvements:
+
+Refactor JavaScript into modular components
+Improve accessibility and responsive design
+Add enhanced validation and error handling
+Expand project showcase and documentation
