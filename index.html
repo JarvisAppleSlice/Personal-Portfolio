@@ -60,86 +60,105 @@
                 </div>
             </div>
         </section>
-        <section>
-            <!--Contact Me section-->
-            <blockquote>
-                <h4>If you would Like to Contact me, please fill out the form below.</h4>
-            </blockquote>
-            <form method="Post">
-                <div class="input-row">
+        <section id="forms">
 
-                    <!--First Name-->
-                    <div class="input-group"> <!--First Name-->
-                        <label for="first-name">First Name:</label>
-                        <input id="first-name" type="text" placeholder="Enter your first name..." required />
+            <section class="reference-form">
+                <section>
+                    <h3></h3>
+                    <div class="references-list">
+                        <h2>References:</h2>
+                        <ul id="references-list"></ul>
                     </div>
-
-                    <!--Last Name-->
-                    <div class="input-row">
-                        <label for="last-name">Last Name:</label>
-                        <input id="last-name" type="text" placeholder="Enter your last name..." required />
-                    </div>
-                </div>
-
-                <!--Message-->
-                <div class="input-row">
-                    <div class="input-group">
-                        <label for="subject">Message Type:</label>
-                        <select id="subject">
-                            <option value="because Inquiry">Business Inquiry</option>
-                            <option value="feedback">Feedback</option>
-                            <option value="general question">General Question</option>
-                        </select>
-                    </div>
-                </div>
-                <!--Message Box to Input-->
-                <div class="input-group">
-                    <label for="message">Message:</label>
+                </section>
+                <form id="create-reference-form">
                     <div>
-                        <textarea name="message" id="message" placeholder="Enter your message..."></textarea>
+                        <h2>Add a Reference</h2>
+                        <fieldset>
+                            <legend>Reference Information</legend>
+                            <label>
+                                Name:<input type="text" name="name" required placeholder="Your name..." />
+                            </label>
+                            <label>
+                                Email:<input type="email" name="email" required placeholder="Your email..." />
+                            </label>
+                            <label>
+                                Company (Optional):<input type="text" name="company" placeholder="Optional..." />
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Optional Testimonial</legend>
+                            <label>
+                                Rating (1-5):<input type="number" name="rating" min="1" max="5" placeholder="..." />
+                            </label>
+                            <label>
+                                Comment:<textarea name="comment" rows="4"
+                                    placeholder="Enter your comment..."></textarea>
+                            </label>
+
+                            <h4>Leave blank if you would rather not leave a testimonial.</h4>
+                        </fieldset>
                     </div>
-                </div>
-                <!--Email-->
-                <div class="input-group">
-                    <label for="email">Email:</label>
-                    <input id="email" type="text" placeholder="Enter your email..." required />
-                </div>
-                <!--Send Button-->
-                <button>Contact Me</button>
-            </form>
-        </section>
-        <section class="reference-form">
-            <h2>Add a Reference</h2>
-            <form id="create-reference-form">
-                <h3></h3>
-                <fieldset>
-                    <legend>Reference Information</legend>
-                    <label>
-                        Name:<input type="text" name="name" required placeholder="Your name..." />
-                    </label>
-                    <label>
-                        Email:<input type="email" name="email" required placeholder="Your email..." />
-                    </label>
-                    <fieldset>
-                        <label>
-                            Company (Optional):<input type="text" name="company" />
-                        </label>
-                    </fieldset>
-                </fieldset>
-                <fieldset>
-                    <legend>Optional Testimonial</legend>
-                    <label>
-                        Comment:<textarea name="comment" rows="4" placeholder="Enter your comment..."></textarea>
-                    </label>
-                    <label>
-                        Rating (1-5):<input type="number" name="rating" min="1" max="5" placeholder="..." />
-                    </label>
-                    <p>Leave blank if you would rather not leave a testimonial.</p>
-                </fieldset>
-                <button type="submit" onclick="refreshPage()">Submit</button>
-            </form>
-            <h2>References:</h2>
-            <ul id="references-list"></ul>
+                    <button class="review" type="submit" onclick="refreshPage()">Submit</button>
+                </form>
+
+            </section>
+            <section>
+                <!--Contact Me section-->
+                <form id="contact-form" method="Post">
+                    <h2>Contact Me</h2>
+                    <div class="input-row">
+                        <!--First Name-->
+                        <fieldset>
+                            <legend>Info</legend>
+                            <div class="input-group"> <!--First Name-->
+                                <label for="first-name">First Name:
+                                    <input id="first-name" type="text" placeholder="Enter your first name..."
+                                        required />
+                                </label>
+                            </div>
+                            <!--Last Name-->
+                            <div>
+                                <label for="last-name">Last Name:
+                                    <input id="last-name" type="text" placeholder="Enter your last name..." required />
+                                </label>
+                            </div>
+                            <!--Email-->
+                            <div>
+                                <div class="input-group">
+                                    <label for="email">Email:
+                                        <input id="email" type="text" placeholder="Enter your email..." required />
+                                    </label>
+
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <!--Message-->
+                    <div class="input-row">
+                        <fieldset>
+                            <legend>Message</legend>
+                            <div class="input-group">
+                                <label for="subject">Message Type:</label>
+                                <select id="subject">
+                                    <option value="because Inquiry">Business Inquiry</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="general question">General Question</option>
+                                </select>
+
+                            </div>
+                            <!--Message Box to Input-->
+                            <div class="input-group">
+                                <label for="message">Message:
+                                    <textarea name="message" id="message" rows="4"
+                                        placeholder="Enter your message..."></textarea>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <!--Send Button-->
+                    <button class="contact-me">Contact Me</button>
+                </form>
+            </section>
         </section>
     </main>
     <footer>
