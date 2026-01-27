@@ -3,6 +3,7 @@ body {
 	font-optical-sizing: auto;
 	font-weight: 700;
 	font-style: normal;
+	background: linear-gradient(80deg, white, blue);
 }
 
 h1,
@@ -64,13 +65,14 @@ header.name {
 	margin-bottom: 3rem;
 	border: 5px dotted black;
 	border-width: 10px;
+	background-color: cadetblue;
 }
 
 .links {
 	position: sticky;
 	font-size: 1rem;
 	text-decoration: none;
-	color: olive;
+	color: black;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -91,7 +93,7 @@ nav ul li {
 }
 
 nav ul li a {
-	color: olive;
+	color: black;
 	font-size: 1rem;
 	text-decoration: none;
 }
