@@ -8,11 +8,111 @@
     <link rel="stylesheet" href="src/output.css">
 </head>
 
-<body class="">
-    <!-- Navbar -->
-    <div class="">
+<body class="bg-blue-400 flex flex-col md:flex-row h-screen">
+    <!-- Nav -->
+    <div class="bg-slate-700 text-white w-min">
+        <div class="flex justify-between md:justify-left items=center m-3">
+            <a href="/"><img src="images/1.JPG" alt="profile photo"
+                    class="w-100 h-100 rounded-full object-cover" />Samuel Jarvis</a>
+
+            <button id="nav-button" class="p-4 text-slate-400 hover:text-slate-200 active:text-slate-100 md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" width="60" height="24" viewBox="0 0 30 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 6l16 0" />
+                    <path d="M4 12l16 0" />
+                    <path d="M4 18l16 0" />
+                </svg>
+            </button>
+
+        </div>
+        <nav id="menu" class="md:h-[calc(100%-5.5rem)] md:flex md:flex-col md:justify-between">
+            <ul class="flex flex-col text-sm text-white">
+
+                <li><a href="/index.html"
+                        class="flex justify-between items-center p-4 hover:bg-slate-600 hover:text-slate-200"><span>Portfolio</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" width="60" height="24"
+                            viewBox="0 0 30 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 6l16 0" />
+                            <path d="M4 12l16 0" />
+                            <path d="M4 18l16 0" />
+                        </svg>
+                    </a>
+                </li>
+                <li><a href="#"
+                        class="flex justify-between items-center p-4 hover:bg-slate-600 hover:text-slate-200"><span>Bridgerland
+                            Projects</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" width="60" height="24"
+                            viewBox="0 0 30 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 6l16 0" />
+                            <path d="M4 12l16 0" />
+                            <path d="M4 18l16 0" />
+                        </svg>
+                    </a>
+                </li>
+                <li><a href="#"
+                        class="flex justify-between items-center p-4 hover:bg-slate-600 hover:text-slate-200"><span>Udemy
+                            Projects</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" width="60" height="24"
+                            viewBox="0 0 30 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 6l16 0" />
+                            <path d="M4 12l16 0" />
+                            <path d="M4 18l16 0" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
     </div>
+    </div>
+    <!-- end nav -->
+    <main id="main-body" class="flex p-8 flex-auto m-4 px-5">
+        <div class="flex flex-row sm:flex-row flex-wrap gap-4 text-white w-full h-fit px-5">
+            <div id="#udemy"
+                class="bg-white w-full px-5 py-5 rounded-xl shadow min-w-56 sm:max-w-80  outline-double outline-red-900 outline-8">
+                <span class="text-slate-400 text-lg flex flex-col text-center">BATC Projects</span>
+                <div class="flex justify-center">
+                    <span class="text-slate-400 text-sm">
+                        <li>Portfolio
+                            <p class="flex flex-auto py-2">This Is The Personal Portfolio.
+                        <li>Resume App
+                            <p class="flex flex-auto py-2">This Is a resume App we built in the introduction course..
+                            </p>
+                        </li>
+                        <li>Weather App
+                            <p class="flex flex-auto py-2">This is a Weather app also Built through the introduction
+                                course.</p>
+                        </li>
+                    </span>
+                </div>
+            </div>
+            <div id="#udemy"
+                class="bg-white w-full px-5 py-5 rounded-xl shadow min-w-56 sm:max-w-80  outline-double outline-red-900 outline-8">
+                <span class="text-slate-400 text-lg flex flex-col text-center">Udemy Projects</span>
+                <div class="flex justify-center">
+                    <span class="text-slate-400 text-sm">
+                        <li>Portfolio
+                            <p class="flex flex-auto py-2">This Is The portfolio I worked on.
+                        <li>Birthday Card
+                            <p class="flex flex-auto py-2">This Is a birthday card with a linked gif.</p>
+                        </li>
+                        <li>Favorite Movies
+                            <p class="flex flex-auto py-2">This Is A list of mivies with links to IMDB for more
+                                information on the Movie.</p>
+                        </li>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </main>
 </body>
 
 </html>
