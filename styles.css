@@ -69,7 +69,7 @@ header.name {
 	margin-bottom: 3rem;
 	outline: 4px solid black;
 	outline-style: double;
-	background-color: cadetblue;
+	background-image: radial-gradient(yellow, darkblue);
 }
 
 .links {
@@ -115,7 +115,7 @@ nav ul li a:hover {
 	height: auto;
 	display: auto;
 	margin: 4rem auto;
-	background-color: cadetblue;
+	background-image: radial-gradient(yellow, darkblue);
 	border: 5px solid #000;
 	border-radius: 15px;
 	box-shadow: 0 0 10 0 #000;
@@ -176,7 +176,7 @@ nav ul li a:hover {
 	height: auto;
 	display: auto;
 	margin: 4rem auto;
-	background-color: cadetblue;
+	background-image: linear-gradient(to top right, darkblue, yellow);
 	border: 5px solid #000;
 	border-radius: 15px;
 	box-shadow: 0 0 10 0 #000;
@@ -320,18 +320,18 @@ nav ul li a:hover {
 
 /*Forms*/
 
-.reference-form {
+/* .reference-form {
 	width: 80%;
 	max-width: 1200px;
 	height: auto;
 	display: auto;
 	margin: 4rem auto;
-	background-color: cadetblue;
+	background-image: linear-gradient(to top right, darkblue, yellow);
 	border: 5px solid #000;
 	border-radius: 15px;
 	margin-top: 1rem;
 	margin-bottom: 3rem;
-}
+} */
 
 /*contact Form*/
 
@@ -341,7 +341,7 @@ nav ul li a:hover {
 	height: auto;
 	display: auto;
 	margin: 4rem auto;
-	background-color: cadetblue;
+	background-image: linear-gradient(to top right, darkblue, yellow);
 	border: 5px solid #000;
 	border-radius: 15px;
 	margin-top: 1rem;
@@ -539,7 +539,7 @@ nav ul li a:hover {
 	height: auto;
 	display: auto;
 	margin: 4rem auto;
-	background-color: cadetblue;
+	background-image: linear-gradient(to bottom left, darkblue, yellow);
 	border: 5px solid #000;
 	border-radius: 15px;
 	margin-top: 1rem;

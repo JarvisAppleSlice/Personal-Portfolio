@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="src/output.css">
 </head>
 
-<body class="bg-blue-400 flex flex-col md:flex-row h-screen">
+<body class="bg-[url(/images/G.jpg)] flex flex-col md:flex-row h-screen">
     <!-- Nav -->
     <div class="bg-slate-700 text-white w-min">
         <div class="flex justify-between md:justify-left items=center m-3">
@@ -73,13 +73,15 @@
     </div>
     </div>
     <!-- end nav -->
-    <main id="main-body" class="flex p-8 flex-auto m-4 px-5">
-        <div class="flex flex-row sm:flex-row flex-wrap gap-4 text-white w-full h-fit px-5">
-            <div id="#udemy"
+    <main id="main-body" class="flex p-8 flex-auto m-4 px-5 text-white w-full h-fit py-5">
+        <!-- cards -->
+        <div class="flex flex-row sm:flex-row flex-wrap gap-4">
+            <!-- card -->
+            <div id="bridgerland"
                 class="bg-white w-full px-5 py-5 rounded-xl shadow min-w-56 sm:max-w-80  outline-double outline-red-900 outline-8">
-                <span class="text-slate-400 text-lg flex flex-col text-center">BATC Projects</span>
+                <span class="text-black text-lg flex flex-col text-center">BATC Projects</span>
                 <div class="flex justify-center">
-                    <span class="text-slate-400 text-sm">
+                    <span class="text-black text-sm py-5">
                         <li>Portfolio
                             <p class="flex flex-auto py-2">This Is The Personal Portfolio.
                         <li>Resume App
@@ -93,11 +95,14 @@
                     </span>
                 </div>
             </div>
-            <div id="#udemy"
+            <!-- end card -->
+
+            <!-- card -->
+            <div id="udemy"
                 class="bg-white w-full px-5 py-5 rounded-xl shadow min-w-56 sm:max-w-80  outline-double outline-red-900 outline-8">
-                <span class="text-slate-400 text-lg flex flex-col text-center">Udemy Projects</span>
+                <span class="text-black text-lg flex flex-col text-center">Udemy Projects</span>
                 <div class="flex justify-center">
-                    <span class="text-slate-400 text-sm">
+                    <span class="text-black text-sm py-5">
                         <li>Portfolio
                             <p class="flex flex-auto py-2">This Is The portfolio I worked on.
                         <li>Birthday Card
@@ -110,8 +115,10 @@
                     </span>
                 </div>
             </div>
+            <!-- end card -->
 
         </div>
+        <!-- end cards -->
     </main>
 </body>
 
