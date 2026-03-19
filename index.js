@@ -30,6 +30,13 @@ const pItems = [
 			"This was another introductory App Made in the introduction of the Software development class at BATC. Lots of fun for me, getting an idea of how software development works.",
 		viewAt: "-View On GitHub-",
 	},
+	{
+		title: "Music Management App",
+		url: "https://github.com/JarvisAppleSlice/musiclibrarymanager.git",
+		description:
+			"A web application for managing songs, albums, and artists built with ASP.NET Core Razor Pages and Entity Framework Core.",
+		viewAt: "-View On GitHub-",
+	},
 ];
 
 const dragonDiv = document.getElementById("dragon");
