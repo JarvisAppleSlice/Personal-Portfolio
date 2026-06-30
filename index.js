@@ -75,36 +75,38 @@ if (refList) {
 
 // Contact form UX only
 const contactForm = document.getElementById("contact-form");
+
 if (contactForm) {
 	contactForm.addEventListener("submit", async (e) => {
 		e.preventDefault();
 
-		const name = document.getElementById("name").value;
-		const email = document.getElementById("email").value;
-		const message = document.getElementById("message").value;
+		const formData = {
+			name: document.getElementById("name").value,
+			email: document.getElementById("email").value,
+			message: document.getElementById("message").value,
+		};
 
 		try {
-			const response = await fetch("http://localhost:7071/api/Contact", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
+			const res = await fetch(
+				"https://portfoliofunction-dwgkftdfeybtaba3.westus2-01.azurewebsites.net/api/Contact",
+				{
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify(formData),
 				},
-				body: JSON.stringify({
-					name,
-					email,
-					message,
-				}),
-			});
+			);
 
-			if (response.ok) {
-				alert("Message sent successfully!");
-				contactForm.reset();
-			} else {
-				alert("Failed to send message.");
+			if (!res.ok) {
+				throw new Error("Request failed");
 			}
-		} catch (error) {
-			console.error(error);
-			alert("Error sending message.");
+
+			alert("Message sent successfully!");
+			contactForm.reset();
+		} catch (err) {
+			console.error(err);
+			alert("Failed to send message.");
 		}
 	});
 }

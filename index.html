@@ -58,9 +58,6 @@
 				<h2>Current Work</h2>
 
 				<div class="current-item">AWS Cloud Practitioner Certification</div>
-
-				<!-- <div class="current-item">AZ-900 Azure Fundamentals</div> -->
-
 				<div class="current-item">React + API Integration Practice</div>
 			</section>
 
@@ -78,26 +75,24 @@
 				</nav>
 			</section>
 
-			<!-- CONTACT -->
+			<!-- CONTACT (FIXED) -->
 			<section class="contact">
 				<h2>Contact</h2>
 
-				<form name="contact" method="POST" data-netlify="true">
-					<input type="hidden" name="form-name" value="contact" />
-
+				<form id="contact-form">
 					<label>
 						Name
-						<input type="text" name="name" required />
+						<input id="name" type="text" required />
 					</label>
 
 					<label>
 						Email
-						<input type="email" name="email" required />
+						<input id="email" type="email" required />
 					</label>
 
 					<label>
 						Message
-						<textarea name="message" rows="5" required></textarea>
+						<textarea id="message" rows="5" required></textarea>
 					</label>
 
 					<button type="submit">Send Message</button>
