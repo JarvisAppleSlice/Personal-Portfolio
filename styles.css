@@ -1,595 +1,246 @@
+/* =========================
+   Base Reset / Defaults
+========================= */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 html {
 	scroll-behavior: smooth;
 }
 
 body {
-	font-family: "Roboto Mono", monospace;
-	font-optical-sizing: auto;
-	font-weight: 700;
-	font-style: normal;
-	background-image: radial-gradient(at 100% 50%, red, blue, green, red, blue, green);
+	font-family: "Montserrat", "Roboto", sans-serif;
+	background: #f5f7fa;
+	color: #334155;
+	line-height: 1.6;
 }
+
+/* =========================
+   Typography
+========================= */
 
 h1,
 h2,
-h3 {
-	font-family: "Boldonse", system-ui;
-	font-weight: 400;
-	font-style: normal;
-}
-
-/*Summary*/
-/* .sum {
-	font-family: "Edu NSW ACT Cursive", cursive;
-	font-optical-sizing: auto;
+h3,
+h4 {
+	color: #1e293b;
 	font-weight: 600;
-	font-style: normal;
-} */
-
-/*Title*/
-#title {
-	font-family: "Boldonse", system-ui;
-	font-weight: 400;
-	font-style: normal;
 }
+
+p {
+	font-size: 1rem;
+	color: #475569;
+}
+
+/* =========================
+   Header
+========================= */
 
 header.name {
-	position: sticky;
-	top: 0;
-	display: flex;
-	justify-content: center;
-	z-index: 10;
-	width: 50%;
-	max-width: 500px;
-	max-height: 50px;
-	margin: auto;
-	padding: 1rem 2rem;
-	align-items: center;
-	border: 1px solid #000;
-	border-radius: 50px;
-	backdrop-filter: blur(50px);
-	transform: translateY(10px);
+	background: #1e293b;
+	color: white;
+	padding: 2rem 1rem;
+	text-align: center;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/*Social Links*/
-.socials {
-	position: sticky;
-	width: 50%;
-	max-width: 1200px;
-	max-height: 50px;
+header.name h1 {
+	font-size: 2rem;
+	letter-spacing: 1px;
+}
+
+/* =========================
+   Layout Sections
+========================= */
+
+main {
+	max-width: 1100px;
 	margin: 0 auto;
-	padding: 1rem 2rem;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	/* border: 1px solid #000;
-	border-radius: 50px; */
-	transform: translateY(10px);
-	margin-top: 2rem;
-	margin-bottom: 3rem;
-	outline: 4px solid black;
-	outline-style: double;
-	background-image: radial-gradient(yellow, darkblue);
+	padding: 2rem 1rem;
 }
 
-.links {
-	position: sticky;
-	font-size: 1rem;
-	text-decoration: none;
-	color: black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+section {
+	margin-bottom: 2rem;
 }
+
+/* Card-like sections */
+.socials,
+.bio,
+.projects,
+.reference-form,
+.contact {
+	background: #ffffff;
+	border: 1px solid #dbe3ec;
+	border-radius: 10px;
+	padding: 1.5rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* =========================
+   Navigation / Links
+========================= */
 
 nav ul {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 1rem;
 	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-nav ul li {
-	margin-right: 1rem;
-}
-
-nav ul li a {
-	color: black;
-	font-size: 1rem;
-	text-decoration: none;
-}
-
-nav ul li a:hover {
-	color: rgb(76, 108, 12);
-	font-size: 1rem;
-	text-decoration: underline;
-}
-
-/* Bio Card */
-.bio {
-	width: 80%;
-	max-width: 1200px;
-	height: auto;
-	display: auto;
-	margin: 4rem auto;
-	background-image: radial-gradient(yellow, darkblue);
-	border: 5px solid #000;
-	border-radius: 15px;
-	box-shadow: 0 0 10 0 #000;
-	/* margin-top: 1rem; */
-	margin-bottom: 3rem;
-}
-
-.bio h2 {
-	font-size: 2rem;
-	align-items: center;
-	justify-content: center;
-	width: 50%;
-	max-width: 500px;
-	height: 100px;
 	display: flex;
-	margin: auto;
-	margin-bottom: auto;
+	gap: 1rem;
+	padding-top: 0.5rem;
 }
 
-.bio p {
-	border: 5px solid #000;
-	border-radius: 20px;
-	/* margin: 10px; */
-	background-color: beige;
-	/* justify-content: center;
-	align-items: center; */
-	padding: 1rem;
-	/* display: flex;
-	flex-direction: column; */
+nav a {
+	text-decoration: none;
+	color: #2563eb;
+	font-weight: 500;
+	transition: color 0.2s ease;
+}
+
+nav a:hover {
+	color: #1d4ed8;
+}
+
+/* =========================
+   Bio Section
+========================= */
+
+.bio {
+	display: flex;
+	gap: 1.5rem;
+	align-items: center;
 }
 
 .bio img {
-	border: 5px solid #000;
-	border-radius: 20px;
-	margin: 10px;
-	background-color: beige;
-	width: 300px;
-	height: auto;
-	display: flex;
-	margin: auto;
+	border-radius: 8px;
+	border: 1px solid #dbe3ec;
 }
 
-.sum {
-	padding: 2rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	font-family: "Edu NSW ACT Cursive", cursive;
-	font-optical-sizing: auto;
-	font-weight: 600;
-	font-style: normal;
+.bio .sum {
+	flex: 1;
 }
 
-/*Projects section*/
-#projects {
-	width: 80%;
-	max-width: 1200px;
-	height: auto;
-	display: auto;
-	margin: 4rem auto;
-	background-image: linear-gradient(to top right, darkblue, yellow);
-	border: 5px solid #000;
-	border-radius: 15px;
-	box-shadow: 0 0 10 0 #000;
-	margin-top: 1rem;
-	margin-bottom: 3rem;
-}
-
-.projects {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	max-width: 600px;
-	margin: 0 auto;
-}
+/* =========================
+   Projects
+========================= */
 
 .projects h2 {
-	font-size: 2rem;
-	align-items: center;
-	justify-content: center;
-	width: 50%;
-	max-width: 500px;
-	height: 100px;
-	display: flex;
-	margin: auto;
-	margin-bottom: auto;
+	margin-bottom: 1rem;
 }
 
-.dragon.active {
-	cursor: pointer;
-	width: 1200px auto;
-	text-align: center;
+#dragon {
+	padding: 1rem;
+	border: 1px dashed #cbd5e1;
+	border-radius: 8px;
+	min-height: 80px;
+}
+
+/* =========================
+   Forms
+========================= */
+
+fieldset {
+	border: 1px solid #dbe3ec;
+	border-radius: 8px;
+	padding: 1rem;
+	margin-bottom: 1rem;
+}
+
+legend {
+	padding: 0 0.5rem;
+	font-weight: 500;
+	color: #1e293b;
+}
+
+label {
+	display: flex;
+	flex-direction: column;
+	font-size: 0.9rem;
+	margin-bottom: 0.8rem;
+}
+
+input,
+textarea,
+select {
+	padding: 0.6rem;
+	border: 1px solid #cbd5e1;
+	border-radius: 6px;
+	font-family: inherit;
+	font-size: 0.95rem;
+	margin-top: 0.3rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
 	outline: none;
-	font-size: 20px;
-	transition: background-color 0.5s ease;
+	border-color: #2563eb;
+	box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
 }
 
-.dragon-title {
-	background-color: beige;
-	border: 5px solid black;
-	border-width: 3px;
-	border-radius: 15px;
-	color: black;
+/* =========================
+   Buttons
+========================= */
+
+button {
+	background: #2563eb;
+	color: white;
+	border: none;
+	padding: 0.7rem 1.2rem;
+	border-radius: 6px;
 	cursor: pointer;
-	padding: 15px;
-	width: auto;
-	text-align: center;
-	outline: none;
-	font-size: 20px;
-	transition: background-color 0.5s ease;
+	font-weight: 500;
+	transition: all 0.2s ease;
 }
 
-.dragon-title:hover {
-	background-color: rgb(169, 169, 152);
+button:hover {
+	background: #1d4ed8;
+	transform: translateY(-1px);
 }
 
-.dragon-title.active {
-	background-color: rgb(169, 169, 152);
-	font-weight: bold;
-	color: blue;
-}
-
-/*Hidden items*/
-
-/* .projectdetails {
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.25s ease;
-	background-color: beige;
-	font-weight: 300;
-	margin: 10px;
-}
-.projectdetails.active {
-	max-height: 300px;
-} */
-
-.dragon-url {
-	max-height: 0;
-	overflow: hidden;
-	transition:
-		max-width 0.1s,
-		max-height 0.1s;
-	/* ease 0.25s; */
-	background-color: beige;
-	/* font-weight: 200; */
-	display: none;
-	border-radius: 5px;
-	width: 300px auto;
-}
-
-.dragon-url.active {
-	max-height: 300px;
-	display: block;
-	/* align-items: center; */
-	text-align: center;
-	font-weight: 800;
-	margin: auto;
-	margin-bottom: 2rem;
-	border: 2px solid black;
-	padding: 5px;
-	width: 200px;
-	transition:
-		max-width 1s,
-		max-height 1s,
-		ease-in-out 1s;
-}
-
-.dragon-url:hover {
-	background-color: rgb(169, 169, 152);
-}
-
-.dragon-description {
-	max-height: 0;
-	overflow: hidden;
-	transition:
-		max-width 0.1s,
-		max-height 0.1s;
-	/* ease 0.25s; */
-	background-color: beige;
-	margin: 15px;
-	border-radius: 5px;
-	/*Description text Style*/
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-family: "Edu NSW ACT Cursive", cursive;
-	font-optical-sizing: auto;
-	font-weight: 600;
-	font-style: normal;
-}
-
-.dragon-description.active {
-	max-height: 400px;
-	border: 2px solid black;
-	padding: 5px;
-	transition:
-		max-width 1s,
-		max-height 1s,
-		ease-in-out 1s;
-}
-
-/*Forms*/
-
-/* .reference-form {
-	width: 80%;
-	max-width: 1200px;
-	height: auto;
-	display: auto;
-	margin: 4rem auto;
-	background-image: linear-gradient(to top right, darkblue, yellow);
-	border: 5px solid #000;
-	border-radius: 15px;
+button.review,
+button.contact-me {
+	width: 100%;
 	margin-top: 1rem;
-	margin-bottom: 3rem;
-} */
-
-/*contact Form*/
-
-.contact {
-	width: 80%;
-	max-width: 1200px;
-	height: auto;
-	display: auto;
-	margin: 4rem auto;
-	background-image: linear-gradient(to top right, darkblue, yellow);
-	border: 5px solid #000;
-	border-radius: 15px;
-	margin-top: 1rem;
-	margin-bottom: 3rem;
 }
 
-#contact-form {
-	background-color: rgb(221, 221, 197);
-	width: auto;
-	max-width: 1200px;
-	height: auto;
-	max-height: 1200px;
-	border-radius: 5px;
-	border: #000 solid 3px;
-	margin: 1rem;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	margin-top: 1rem;
-	margin-bottom: 3rem;
-}
-/* #contact-form fieldset {
-	text-align: center;
-	padding: 1rem;
-	flex-direction: grid;
-	background-color: beige;
-	border-radius: 5px;
-	border: #000 solid 1px;
-	margin: 1rem;
-	justify-content: center;
-} */
-
-#contact-form legend {
-	text-align: center;
-}
-
-#contact-form fieldset {
-	width: auto;
-	max-width: 1000px;
-	height: auto;
-	max-height: 1200px;
-	text-align: auto;
-	font-weight: 800;
-	border-radius: 5px;
-	border: #000 solid px;
-	/* padding: 1rem; */
-	display: flex;
-	flex-direction: column;
-	background-color: beige;
-	margin: 1rem;
-}
-
-#contact-form div {
-	text-align: center;
-	padding: 1rem;
-	flex-direction: column;
-}
-
-/*contact me button*/
-
-.contact-me {
-	width: auto;
-	max-width: 100px;
-	height: auto;
-	max-height: 100px;
-	background-color: beige;
-	color: black;
-	cursor: pointer;
-	margin: 2rem;
-	border-radius: 50%;
-	outline: double;
-	outline-color: #000;
-	outline-width: 5px;
-}
-
-.contact-me:hover {
-	width: auto;
-	max-width: 100px;
-	height: auto;
-	max-height: 100px;
-	background-color: black;
-	color: beige;
-	cursor: pointer;
-	margin: 2rem;
-	border-radius: 50%;
-	transition: ease-in-out 0.3s;
-}
-
-/*Create Reference*/
-
-/* .reference-form {
-	width: 80%;
-	max-width: 1200px;
-	height: auto;
-	display: auto;
-	margin: 4rem auto;
-	background-color: cadetblue;
-	border: 5px solid #000;
-	border-radius: 15px;
-	margin-top: 1rem;
-	margin-bottom: 3rem;
-} */
-
-#create-reference-form {
-	background-color: rgb(221, 221, 197);
-	width: auto;
-	max-width: 1200px;
-	height: auto;
-	max-height: 1200px;
-	border-radius: 5px;
-	border: #000 solid 3px;
-	margin: 1rem;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	margin-top: 1rem;
-	margin-bottom: 3rem;
-}
-
-/* #create-reference-form form {
-	background-color: rgb(221, 221, 197);
-	border-radius: 5px;
-	border: #000 solid 1px;
-} */
-
-#create-reference-form legend {
-	text-align: center;
-}
-
-#create-reference-form label {
-	text-align: center;
-	padding: 1rem;
-	flex-direction: column;
-	width: auto;
-	max-width: 500px;
-	height: auto;
-	max-height: 100px;
-}
-
-#create-reference-form fieldset {
-	width: auto;
-	max-width: 1000px;
-	height: auto;
-	max-height: 1200px;
-	text-align: auto;
-	font-weight: 800;
-	border-radius: 5px;
-	border: #000 solid px;
-	/* padding: 1rem; */
-	display: flex;
-	flex-direction: column;
-	background-color: beige;
-	margin: 3rem;
-	align-items: center;
-	justify-content: center;
-}
-
-/*Submit Button*/
-.review {
-	width: auto;
-	max-width: 100px;
-	height: auto;
-	max-height: 100px;
-	background-color: beige;
-	color: black;
-	cursor: pointer;
-	margin: 2rem;
-	border-radius: 50%;
-	outline: double;
-	outline-color: #000;
-	outline-width: 5px;
-}
-
-.review:hover {
-	width: auto;
-	max-width: 100px;
-	height: auto;
-	max-height: 100px;
-	background-color: black;
-	color: beige;
-	cursor: pointer;
-	margin: 2rem;
-	border-radius: 50%;
-	transition: ease-in-out 0.3s;
-}
-
-/*Reference List*/
-
-.reference-form {
-	/* display: grid; */
-	justify-content: center;
-	align-items: center;
-	width: 80%;
-	max-width: 1200px;
-	height: auto;
-	display: auto;
-	margin: 4rem auto;
-	background-image: linear-gradient(to bottom left, darkblue, yellow);
-	border: 5px solid #000;
-	border-radius: 15px;
-	margin-top: 1rem;
-	margin-bottom: 3rem;
-}
-
-.reference-form h2 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.reference-form h3 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.references-list {
-	background-color: beige;
-	margin: 15px;
-	border-radius: 5px;
-	border: #000 solid 3px;
-	display: flex;
-	flex-direction: column;
-}
-
-.references-list p {
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-family: "Edu NSW ACT Cursive", cursive;
-	font-optical-sizing: auto;
-	font-weight: 600;
-	font-style: normal;
-}
+/* =========================
+   References List
+========================= */
 
 .references-list ul {
-	margin-left: 3rem;
-	margin-right: 3rem;
+	list-style: none;
+	margin-top: 1rem;
 }
 
+.references-list li {
+	padding: 0.75rem;
+	border-bottom: 1px solid #e2e8f0;
+}
+
+/* =========================
+   Footer
+========================= */
+
 footer {
-	background: blue;
-	color: beige;
-	padding: 1rem 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 1rem;
-	outline: 4px solid black;
-	outline-style: double;
+	text-align: center;
+	padding: 2rem;
+	color: #64748b;
+	font-size: 0.9rem;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+	nav ul {
+		flex-direction: column;
+	}
+
+	.bio {
+		flex-direction: column;
+		text-align: center;
+	}
 }
