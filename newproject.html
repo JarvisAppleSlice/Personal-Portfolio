@@ -3,103 +3,41 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Samuel Jarvis - Projects</title>
-
-		<!-- Use your main portfolio stylesheet -->
+		<title>Projects</title>
 		<link rel="stylesheet" href="styles.css" />
+		<script src="index.js" defer></script>
 	</head>
 
 	<body>
-		<!-- Header -->
 		<header class="name">
-			<h1>Samuel Jarvis - Projects</h1>
+			<h1>Projects Deep Dive</h1>
 		</header>
 
-		<main id="main">
-			<!-- Navigation back -->
-			<section>
-				<div class="socials">
-					<div class="links">
-						<h2>Navigation</h2>
+		<main>
+			<section class="projects card">
+				<h2>Full Project Portfolio</h2>
+				<div class="project-list" id="dragon"></div>
+			</section>
+
+			<section class="projects card">
+				<h2>Additional Projects</h2>
+
+				<div class="project-list">
+					<div class="project-item">
+						<button class="project-title">Birthday Card</button>
+						<div class="project-details">
+							HTML/CSS interactive card project with animation effects.
+						</div>
 					</div>
 
-					<nav>
-						<ul>
-							<li><a href="index.html">← Back to Portfolio</a></li>
-							<li>
-								<a href="https://github.com/JarvisAppleSlice" target="_blank">GitHub</a>
-							</li>
-							<li>
-								<a
-									href="https://www.linkedin.com/in/samuel-jarvis-400712232"
-									target="_blank"
-									>LinkedIn</a
-								>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</section>
-
-			<!-- BATC Projects -->
-			<section>
-				<div class="socials">
-					<h2>BATC Projects</h2>
-
-					<ul>
-						<li>
-							<strong>Portfolio Website</strong>
-							<p>Personal developer portfolio built with HTML, CSS, and JavaScript.</p>
-						</li>
-
-						<li>
-							<strong>Resume App</strong>
-							<p>Application built during introductory software development training.</p>
-						</li>
-
-						<li>
-							<strong>Weather App</strong>
-							<p>Frontend project consuming weather API data and rendering UI updates.</p>
-						</li>
-
-						<li>
-							<strong>Music Manager</strong>
-							<p>
-								ASP.NET Core application for managing songs, albums, and artists with CRUD
-								functionality.
-							</p>
-						</li>
-					</ul>
-				</div>
-			</section>
-
-			<!-- Udemy Projects -->
-			<section>
-				<div class="socials">
-					<h2>Udemy Projects</h2>
-
-					<ul>
-						<li>
-							<strong>Portfolio Exercises</strong>
-							<p>Practice projects focused on HTML structure and layout design.</p>
-						</li>
-
-						<li>
-							<strong>Birthday Card</strong>
-							<p>Simple HTML/CSS project with embedded media and styling.</p>
-						</li>
-
-						<li>
-							<strong>Favorite Movies</strong>
-							<p>Static page listing films with external IMDB links.</p>
-						</li>
-					</ul>
+					<div class="project-item">
+						<button class="project-title">Favorite Movies</button>
+						<div class="project-details">
+							Movie listing app with IMDB links and filtering.
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
-
-		<footer>
-			<p>&copy; 2024 Samuel Jarvis</p>
-		</footer>
 	</body>
 </html>

@@ -1,6 +1,23 @@
 /* =========================
-   Base Reset / Defaults
+   Design System
 ========================= */
+
+:root {
+	--primary: #2563eb;
+	--primary-dark: #1d4ed8;
+
+	--accent-red: #ef4444;
+	--accent-yellow: #f59e0b;
+
+	--bg: #f5f7fa;
+	--card: #ffffff;
+	--text: #334155;
+	--muted: #64748b;
+	--border: #dbe3ec;
+
+	--radius: 12px;
+	--shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
 
 * {
 	margin: 0;
@@ -13,27 +30,27 @@ html {
 }
 
 body {
-	font-family: "Montserrat", "Roboto", sans-serif;
-	background: #f5f7fa;
-	color: #334155;
+	font-family: "Montserrat", sans-serif;
+	background: var(--bg);
+	color: var(--text);
 	line-height: 1.6;
 }
 
 /* =========================
-   Typography
+   Layout Normalization
 ========================= */
 
-h1,
-h2,
-h3,
-h4 {
-	color: #1e293b;
-	font-weight: 600;
+main {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
 }
 
-p {
-	font-size: 1rem;
-	color: #475569;
+section {
+	margin: 0;
 }
 
 /* =========================
@@ -41,70 +58,65 @@ p {
 ========================= */
 
 header.name {
-	background: #1e293b;
+	background: linear-gradient(90deg, #1e293b, var(--primary-dark));
 	color: white;
 	padding: 2rem 1rem;
 	text-align: center;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-header.name h1 {
-	font-size: 2rem;
-	letter-spacing: 1px;
+	box-shadow: var(--shadow);
 }
 
 /* =========================
-   Layout Sections
+   Cards (GLOBAL SYSTEM)
 ========================= */
 
-main {
-	max-width: 1100px;
-	margin: 0 auto;
-	padding: 2rem 1rem;
-}
-
-section {
-	margin-bottom: 2rem;
-}
-
-/* Card-like sections */
+.card,
 .socials,
 .bio,
 .projects,
 .reference-form,
 .contact,
-.references {
-	background: #ffffff;
-	border: 1px solid #dbe3ec;
-	border-radius: 10px;
+.references,
+.current-work {
+	background: var(--card);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
 	padding: 1.5rem;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+	box-shadow: var(--shadow);
+}
+
+/* IMPORTANT: normalize spacing inside cards */
+.card + .card,
+.socials + .socials,
+.projects + .projects,
+.current-work + .current-work {
+	margin-top: 0;
 }
 
 /* =========================
-   Navigation / Links
+   Navigation
 ========================= */
 
 nav ul {
 	list-style: none;
 	display: flex;
 	gap: 1rem;
-	padding-top: 0.5rem;
+	margin-top: 0.5rem;
+	flex-wrap: wrap;
 }
 
 nav a {
 	text-decoration: none;
-	color: #2563eb;
+	color: var(--primary);
 	font-weight: 500;
-	transition: color 0.2s ease;
+	transition: 0.2s;
 }
 
 nav a:hover {
-	color: #1d4ed8;
+	color: var(--accent-yellow);
 }
 
 /* =========================
-   Bio Section
+   Bio
 ========================= */
 
 .bio {
@@ -114,93 +126,146 @@ nav a:hover {
 }
 
 .bio img {
-	border-radius: 8px;
-	border: 1px solid #dbe3ec;
-}
-
-.bio .sum {
-	flex: 1;
+	border-radius: var(--radius);
+	border: 1px solid var(--border);
 }
 
 /* =========================
-   Projects (Accordion Upgrade)
+   PROJECT SYSTEM (SHARED)
 ========================= */
 
-#dragon {
+.project-list {
 	display: flex;
 	flex-direction: column;
-	gap: 0.75rem;
+	gap: 1rem;
 }
 
-/* Project card */
+/* each project card */
 .project-item {
-	border: 1px solid #dbe3ec;
-	border-radius: 8px;
+	background: var(--card);
+	border: 1px solid var(--border);
+	border-left: 5px solid var(--primary);
+	border-radius: var(--radius);
 	overflow: hidden;
-	background: #fff;
 }
 
-/* Accordion button */
+/* alternating accent colors */
+.project-item:nth-child(even) {
+	border-left-color: var(--accent-yellow);
+}
+.project-item:nth-child(odd) {
+	border-left-color: var(--accent-red);
+}
+
+/* hover polish */
+.project-item:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--shadow);
+	transition: 0.2s ease;
+}
+
+/* =========================
+   ACCORDION BUTTON
+========================= */
+
 .project-title {
 	width: 100%;
 	text-align: left;
-	padding: 0.9rem 1rem;
-	background: #2563eb;
+	padding: 1rem;
+	background: linear-gradient(90deg, var(--primary), var(--primary-dark));
 	color: white;
 	border: none;
-	cursor: pointer;
 	font-size: 1rem;
-	transition: background 0.2s ease;
+	cursor: pointer;
+	position: relative;
 }
 
-.project-title:hover {
-	background: #1d4ed8;
+.project-title::after {
+	content: "▾";
+	position: absolute;
+	right: 1rem;
+	transition: transform 0.2s ease;
+	opacity: 0.8;
 }
 
-/* Hidden details */
+.project-item.active .project-title::after {
+	transform: rotate(180deg);
+}
+
+/* =========================
+   ACCORDION CONTENT
+========================= */
+
 .project-details {
 	max-height: 0;
 	overflow: hidden;
-	transition: max-height 0.3s ease;
+	transition: max-height 0.25s ease;
 	padding: 0 1rem;
-	background: #ffffff;
+	background: white;
 }
 
-/* Expanded state */
 .project-item.active .project-details {
-	max-height: 200px;
+	max-height: 400px;
 	padding: 1rem;
+	border-top: 1px solid var(--border);
 }
 
-/* Project link */
+/* links inside projects */
 .project-link {
-	display: inline-block;
-	margin-top: 0.5rem;
-	color: #2563eb;
+	color: var(--primary);
 	font-weight: 500;
 	text-decoration: none;
 }
 
 .project-link:hover {
-	color: #1d4ed8;
 	text-decoration: underline;
 }
 
 /* =========================
-   Forms
+   CURRENT WORK (FIXED CARD)
+========================= */
+
+.current-work {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.current-item {
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 1rem;
+	border-left: 5px solid var(--accent-yellow);
+	background: white;
+}
+
+/* =========================
+   REFERENCES
+========================= */
+
+.references {
+	background: var(--card);
+	border-radius: var(--radius);
+	padding: 1.5rem;
+}
+
+.reference-card {
+	background: #fff;
+	border: 1px solid var(--border);
+	border-left: 5px solid var(--accent-red);
+	padding: 1rem;
+	border-radius: var(--radius);
+}
+
+/* =========================
+   FORMS (kept clean but subtle)
 ========================= */
 
 fieldset {
-	border: 1px solid #dbe3ec;
+	border: 1px solid var(--border);
 	border-radius: 8px;
 	padding: 1rem;
 	margin-bottom: 1rem;
-}
-
-legend {
-	padding: 0 0.5rem;
-	font-weight: 500;
-	color: #1e293b;
 }
 
 label {
@@ -216,71 +281,46 @@ select {
 	padding: 0.6rem;
 	border: 1px solid #cbd5e1;
 	border-radius: 6px;
-	font-family: inherit;
-	font-size: 0.95rem;
-	margin-top: 0.3rem;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
+	border-color: var(--primary);
 	outline: none;
-	border-color: #2563eb;
-	box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
 }
 
 /* =========================
-   Buttons
+   BUTTONS
 ========================= */
 
 button {
-	background: #2563eb;
+	background: var(--primary);
 	color: white;
 	border: none;
 	padding: 0.7rem 1.2rem;
 	border-radius: 6px;
 	cursor: pointer;
-	font-weight: 500;
-	transition: all 0.2s ease;
+	transition: 0.2s;
 }
 
 button:hover {
-	background: #1d4ed8;
+	background: var(--primary-dark);
 	transform: translateY(-1px);
 }
 
-button.review,
-button.contact-me {
-	width: 100%;
-	margin-top: 1rem;
-}
-
 /* =========================
-   References (Clean Version)
-========================= */
-
-.references {
-	margin-top: 1rem;
-}
-
-.references p {
-	margin-top: 0.5rem;
-	color: #475569;
-}
-
-/* =========================
-   Footer
+   FOOTER
 ========================= */
 
 footer {
 	text-align: center;
 	padding: 2rem;
-	color: #64748b;
-	font-size: 0.9rem;
+	color: var(--muted);
 }
 
 /* =========================
-   Responsive
+   RESPONSIVE
 ========================= */
 
 @media (max-width: 768px) {

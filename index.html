@@ -3,232 +3,110 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Boldonse&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Send+Flowers&display=swap"
-			rel="stylesheet"
-		/>
+		<title>Samuel Jarvis | Software Developer</title>
+
 		<link rel="stylesheet" href="styles.css" />
-		<title id="#title">Samuel Jarvis</title>
 		<script src="index.js" defer></script>
 	</head>
 
 	<body>
 		<header class="name">
-			<h1>Samuel's Portfolio</h1>
+			<h1>Samuel Jarvis</h1>
+			<p class="subtitle">
+				Junior Software Developer • Python • React • C# • .NET • SQL • Azure
+			</p>
 		</header>
-		<main id="main">
-			<section>
-				<div class="socials">
-					<div class="links">
-						<h2>Projects</h2>
-					</div>
-					<nav>
-						<ul>
-							<li><a href="./newproject.html">View Projects</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
-			<section>
-				<div class="socials">
-					<div class="links">
-						<h2>Social Links</h2>
-					</div>
-					<nav>
-						<ul>
-							<li>
-								<a
-									href="https://www.linkedin.com/in/samuel-jarvis-400712232"
-									target="_blank"
-									>View on LinkedIn</a
-								>
-							</li>
-							<li>
-								<a href="https://github.com/JarvisAppleSlice" target="_blank"
-									>View on GitHub</a
-								>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</section>
-			<section id="bio">
-				<div class="bio">
-					<h2>Sam Jarvis</h2>
-					<img src="images/1.JPG" alt="Sam" width="100px" height="100px" />
-					<div class="sum">
-						<p>
-							I am transitioning into software engineering after a career in precision
-							manufacturing, where I worked in high-reliability, safety-critical
-							environments with strict quality and documentation requirements. My
-							background emphasizes accountability, disciplined processes, technical
-							problem-solving, and collaboration—values I carry forward into my software
-							development training and project work. I am comfortable working within
-							structured systems, following established procedures, and supporting
-							mission-focused teams.
-						</p>
-					</div>
-				</div>
-			</section>
-			<section id="projects">
-				<div class="projects">
-					<div>
-						<h2>Projects</h2>
-						<div id="dragon"></div>
-					</div>
-				</div>
-			</section>
-			<section id="forms">
-				<section class="reference-form">
-					<section>
-						<h3></h3>
-						<section class="references">
-							<h2>References</h2>
 
-							<div class="reference-card">
-								<p>Professional references available upon request.</p>
-								<p>LinkedIn recommendations available on profile.</p>
-							</div>
-						</section>
-					</section>
-					<!-- <form id="create-reference-form">
-						<div>
-							<h2>Add a Reference</h2>
-							<fieldset>
-								<legend>Reference Information</legend>
-								<label>
-									Name:<input
-										type="text"
-										name="name"
-										required
-										placeholder="Your name..."
-									/>
-								</label>
-								<label>
-									Email:<input
-										type="email"
-										name="email"
-										required
-										placeholder="Your email..."
-									/>
-								</label>
-								<label>
-									Company (Optional):<input
-										type="text"
-										name="company"
-										placeholder="Optional..."
-									/>
-								</label>
-							</fieldset>
-							<fieldset>
-								<legend>Optional Testimonial</legend>
-								<label>
-									Rating (1-5):<input
-										type="number"
-										name="rating"
-										min="1"
-										max="5"
-										placeholder="..."
-									/>
-								</label>
-								<label>
-									Comment:<textarea
-										name="comment"
-										rows="4"
-										placeholder="Enter your comment..."
-									></textarea>
-								</label>
+		<main>
+			<!-- ABOUT -->
+			<section class="bio">
+				<img src="images/1.JPG" alt="Sam" width="100" height="100" />
 
-								<h4>Leave blank if you would rather not leave a testimonial.</h4>
-							</fieldset>
-						</div>
-						<button class="review" type="submit" onclick="refreshPage()">Submit</button>
-					</form> -->
-				</section>
-				<section class="contact">
-					<!--Contact Me section-->
-					<form id="contact-form" method="Post">
-						<h2>Contact Me</h2>
-						<div class="input-row">
-							<!--First Name-->
-							<fieldset>
-								<legend>Info</legend>
-								<div class="input-group">
-									<!--First Name-->
-									<label for="first-name"
-										>First Name:
-										<input
-											id="first-name"
-											type="text"
-											placeholder="Enter your first name..."
-											required
-										/>
-									</label>
-								</div>
-								<!--Last Name-->
-								<div>
-									<label for="last-name"
-										>Last Name:
-										<input
-											id="last-name"
-											type="text"
-											placeholder="Enter your last name..."
-											required
-										/>
-									</label>
-								</div>
-								<!--Email-->
-								<div>
-									<div class="input-group">
-										<label for="email"
-											>Email:
-											<input
-												id="email"
-												type="text"
-												placeholder="Enter your email..."
-												required
-											/>
-										</label>
-									</div>
-								</div>
-							</fieldset>
-						</div>
-						<!--Message-->
-						<div class="input-row">
-							<fieldset>
-								<legend>Message</legend>
-								<div class="input-group">
-									<label for="subject">Message Type:</label>
-									<select id="subject">
-										<option value="because Inquiry">Business Inquiry</option>
-										<option value="feedback">Feedback</option>
-										<option value="general question">General Question</option>
-									</select>
-								</div>
-								<!--Message Box to Input-->
-								<div class="input-group">
-									<label for="message"
-										>Message:
-										<textarea
-											name="message"
-											id="message"
-											rows="4"
-											placeholder="Enter your message..."
-										></textarea>
-									</label>
-								</div>
-							</fieldset>
-						</div>
-						<!--Send Button-->
-						<button class="contact-me">Contact Me</button>
-					</form>
-				</section>
+				<div class="sum">
+					<h2>About Me</h2>
+					<p>
+						I am transitioning into software engineering after a career in precision
+						manufacturing, where I worked in structured, high-reliability environments
+						focused on quality, documentation, and problem solving.
+					</p>
+				</div>
+			</section>
+
+			<!-- FEATURED PROJECTS -->
+			<section class="projects">
+				<h2>Featured Projects</h2>
+
+				<div class="project-preview">
+					<div class="project-card">
+						<h3>Music Library Manager</h3>
+						<p>ASP.NET Core + EF Core application for managing music data.</p>
+						<span class="tags">C# · .NET · EF Core · SQL</span>
+						<a href="./newproject.html#music">View Details →</a>
+					</div>
+
+					<div class="project-card">
+						<h3>Weather App</h3>
+						<p>JavaScript API-driven weather application with dynamic UI updates.</p>
+						<span class="tags">JavaScript · API · CSS</span>
+						<a href="./newproject.html#weather">View Details →</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- CURRENT WORK -->
+			<section class="current-work">
+				<h2>Current Work</h2>
+
+				<div class="current-item">AWS Cloud Practitioner Certification</div>
+
+				<!-- <div class="current-item">AZ-900 Azure Fundamentals</div> -->
+
+				<div class="current-item">React + API Integration Practice</div>
+			</section>
+
+			<!-- LINKS -->
+			<section class="socials">
+				<h2>Links</h2>
+				<nav>
+					<ul>
+						<li><a href="./newproject.html">Full Project Portfolio →</a></li>
+						<li>
+							<a href="https://github.com/JarvisAppleSlice" target="_blank">GitHub</a>
+						</li>
+						<li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+					</ul>
+				</nav>
+			</section>
+
+			<!-- CONTACT -->
+			<section class="contact">
+				<h2>Contact</h2>
+
+				<form name="contact" method="POST" data-netlify="true">
+					<input type="hidden" name="form-name" value="contact" />
+
+					<label>
+						Name
+						<input type="text" name="name" required />
+					</label>
+
+					<label>
+						Email
+						<input type="email" name="email" required />
+					</label>
+
+					<label>
+						Message
+						<textarea name="message" rows="5" required></textarea>
+					</label>
+
+					<button type="submit">Send Message</button>
+				</form>
 			</section>
 		</main>
+
 		<footer>
-			<p>&copy; 2024</p>
+			<p>&copy; 2026 Samuel Jarvis</p>
 		</footer>
 	</body>
 </html>
