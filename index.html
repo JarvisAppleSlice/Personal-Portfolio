@@ -1,179 +1,230 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Boldonse&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Send+Flowers&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<title id="#title">Samuel Jarvis</title>
+		<script src="index.js" defer></script>
+	</head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Boldonse&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Send+Flowers&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <title id="#title">Samuel Jarvis</title>
-    <script src="index.js" defer></script>
-</head>
+	<body>
+		<header class="name">
+			<h1>Samuel's Portfolio</h1>
+		</header>
+		<main id="main">
+			<section>
+				<div class="socials">
+					<div class="links">
+						<h2>Projects</h2>
+					</div>
+					<nav>
+						<ul>
+							<li><a href="./newproject.html">View Projects</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+			<section>
+				<div class="socials">
+					<div class="links">
+						<h2>Social Links</h2>
+					</div>
+					<nav>
+						<ul>
+							<li>
+								<a
+									href="https://www.linkedin.com/in/samuel-jarvis-400712232"
+									target="_blank"
+									>View on LinkedIn</a
+								>
+							</li>
+							<li>
+								<a href="https://github.com/JarvisAppleSlice" target="_blank"
+									>View on GitHub</a
+								>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+			<section id="bio">
+				<div class="bio">
+					<h2>Sam Jarvis</h2>
+					<img src="images/1.JPG" alt="Sam" width="100px" height="100px" />
+					<div class="sum">
+						<p>
+							I am transitioning into software engineering after a career in precision
+							manufacturing, where I worked in high-reliability, safety-critical
+							environments with strict quality and documentation requirements. My
+							background emphasizes accountability, disciplined processes, technical
+							problem-solving, and collaboration—values I carry forward into my software
+							development training and project work. I am comfortable working within
+							structured systems, following established procedures, and supporting
+							mission-focused teams.
+						</p>
+					</div>
+				</div>
+			</section>
+			<section id="projects">
+				<div class="projects">
+					<div>
+						<h2>Projects</h2>
+						<div id="dragon"></div>
+					</div>
+				</div>
+			</section>
+			<section id="forms">
+				<section class="reference-form">
+					<section>
+						<h3></h3>
+						<div class="references-list">
+							<h2>References:</h2>
+							<ul id="references-list"></ul>
+						</div>
+					</section>
+					<form id="create-reference-form">
+						<div>
+							<h2>Add a Reference</h2>
+							<fieldset>
+								<legend>Reference Information</legend>
+								<label>
+									Name:<input
+										type="text"
+										name="name"
+										required
+										placeholder="Your name..."
+									/>
+								</label>
+								<label>
+									Email:<input
+										type="email"
+										name="email"
+										required
+										placeholder="Your email..."
+									/>
+								</label>
+								<label>
+									Company (Optional):<input
+										type="text"
+										name="company"
+										placeholder="Optional..."
+									/>
+								</label>
+							</fieldset>
+							<fieldset>
+								<legend>Optional Testimonial</legend>
+								<label>
+									Rating (1-5):<input
+										type="number"
+										name="rating"
+										min="1"
+										max="5"
+										placeholder="..."
+									/>
+								</label>
+								<label>
+									Comment:<textarea
+										name="comment"
+										rows="4"
+										placeholder="Enter your comment..."
+									></textarea>
+								</label>
 
-<body>
-    <header class="name">
-        <h1>Samuel's Portfolio</h1>
-    </header>
-    <main id="main">
-        <section>
-            <div class="socials">
-                <div class="links">
-                    <h2>Projects</h2>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="newproject.html">View Projects</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </section>
-        <section>
-            <div class="socials">
-                <div class="links">
-                    <h2>Social Links</h2>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/samuel-jarvis-400712232" target="_blank">View on
-                                LinkedIn</a></li>
-                        <li><a href="https://github.com/JarvisAppleSlice" target="_blank">View on GitHub</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </section>
-        <section id="bio">
-            <div class="bio">
-                <h2>Sam Jarvis</h2>
-                <img src="images/1.JPG" alt="Sam" width="100px" height="100px">
-                <div class="sum">
-                    <p>
-                        I am transitioning into software engineering after a career in precision manufacturing, where I
-                        worked in high-reliability, safety-critical environments with strict quality and documentation
-                        requirements. My background emphasizes accountability, disciplined processes, technical
-                        problem-solving, and collaboration—values I carry forward into my software development training
-                        and project work. I am comfortable working within structured systems, following established
-                        procedures, and supporting mission-focused teams.
-
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section id="projects">
-            <div class="projects">
-                <div>
-                    <h2>Projects</h2>
-                    <div id="dragon"></div>
-                </div>
-            </div>
-        </section>
-        <section id="forms">
-
-            <section class="reference-form">
-                <section>
-                    <h3></h3>
-                    <div class="references-list">
-                        <h2>References:</h2>
-                        <ul id="references-list"></ul>
-                    </div>
-                </section>
-                <form id="create-reference-form">
-                    <div>
-                        <h2>Add a Reference</h2>
-                        <fieldset>
-                            <legend>Reference Information</legend>
-                            <label>
-                                Name:<input type="text" name="name" required placeholder="Your name..." />
-                            </label>
-                            <label>
-                                Email:<input type="email" name="email" required placeholder="Your email..." />
-                            </label>
-                            <label>
-                                Company (Optional):<input type="text" name="company" placeholder="Optional..." />
-                            </label>
-                        </fieldset>
-                        <fieldset>
-                            <legend>Optional Testimonial</legend>
-                            <label>
-                                Rating (1-5):<input type="number" name="rating" min="1" max="5" placeholder="..." />
-                            </label>
-                            <label>
-                                Comment:<textarea name="comment" rows="4"
-                                    placeholder="Enter your comment..."></textarea>
-                            </label>
-
-                            <h4>Leave blank if you would rather not leave a testimonial.</h4>
-                        </fieldset>
-                    </div>
-                    <button class="review" type="submit" onclick="refreshPage()">Submit</button>
-                </form>
-
-            </section>
-            <section class="contact">
-                <!--Contact Me section-->
-                <form id="contact-form" method="Post">
-                    <h2>Contact Me</h2>
-                    <div class="input-row">
-                        <!--First Name-->
-                        <fieldset>
-                            <legend>Info</legend>
-                            <div class="input-group"> <!--First Name-->
-                                <label for="first-name">First Name:
-                                    <input id="first-name" type="text" placeholder="Enter your first name..."
-                                        required />
-                                </label>
-                            </div>
-                            <!--Last Name-->
-                            <div>
-                                <label for="last-name">Last Name:
-                                    <input id="last-name" type="text" placeholder="Enter your last name..." required />
-                                </label>
-                            </div>
-                            <!--Email-->
-                            <div>
-                                <div class="input-group">
-                                    <label for="email">Email:
-                                        <input id="email" type="text" placeholder="Enter your email..." required />
-                                    </label>
-
-                                </div>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <!--Message-->
-                    <div class="input-row">
-                        <fieldset>
-                            <legend>Message</legend>
-                            <div class="input-group">
-                                <label for="subject">Message Type:</label>
-                                <select id="subject">
-                                    <option value="because Inquiry">Business Inquiry</option>
-                                    <option value="feedback">Feedback</option>
-                                    <option value="general question">General Question</option>
-                                </select>
-
-                            </div>
-                            <!--Message Box to Input-->
-                            <div class="input-group">
-                                <label for="message">Message:
-                                    <textarea name="message" id="message" rows="4"
-                                        placeholder="Enter your message..."></textarea>
-                                </label>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <!--Send Button-->
-                    <button class="contact-me">Contact Me</button>
-                </form>
-            </section>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024</p>
-    </footer>
-</body>
-
+								<h4>Leave blank if you would rather not leave a testimonial.</h4>
+							</fieldset>
+						</div>
+						<button class="review" type="submit" onclick="refreshPage()">Submit</button>
+					</form>
+				</section>
+				<section class="contact">
+					<!--Contact Me section-->
+					<form id="contact-form" method="Post">
+						<h2>Contact Me</h2>
+						<div class="input-row">
+							<!--First Name-->
+							<fieldset>
+								<legend>Info</legend>
+								<div class="input-group">
+									<!--First Name-->
+									<label for="first-name"
+										>First Name:
+										<input
+											id="first-name"
+											type="text"
+											placeholder="Enter your first name..."
+											required
+										/>
+									</label>
+								</div>
+								<!--Last Name-->
+								<div>
+									<label for="last-name"
+										>Last Name:
+										<input
+											id="last-name"
+											type="text"
+											placeholder="Enter your last name..."
+											required
+										/>
+									</label>
+								</div>
+								<!--Email-->
+								<div>
+									<div class="input-group">
+										<label for="email"
+											>Email:
+											<input
+												id="email"
+												type="text"
+												placeholder="Enter your email..."
+												required
+											/>
+										</label>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<!--Message-->
+						<div class="input-row">
+							<fieldset>
+								<legend>Message</legend>
+								<div class="input-group">
+									<label for="subject">Message Type:</label>
+									<select id="subject">
+										<option value="because Inquiry">Business Inquiry</option>
+										<option value="feedback">Feedback</option>
+										<option value="general question">General Question</option>
+									</select>
+								</div>
+								<!--Message Box to Input-->
+								<div class="input-group">
+									<label for="message"
+										>Message:
+										<textarea
+											name="message"
+											id="message"
+											rows="4"
+											placeholder="Enter your message..."
+										></textarea>
+									</label>
+								</div>
+							</fieldset>
+						</div>
+						<!--Send Button-->
+						<button class="contact-me">Contact Me</button>
+					</form>
+				</section>
+			</section>
+		</main>
+		<footer>
+			<p>&copy; 2024</p>
+		</footer>
+	</body>
 </html>
