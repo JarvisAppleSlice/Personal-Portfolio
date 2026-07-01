@@ -13,21 +13,22 @@ const projects = [
 			"React app with Registration/Login, basic messaging, verification and article sharing. Hosted through Vercel",
 		viewAt: "View Project",
 	},
-	{
-		title: "Music Management App",
-		url: "https://github.com/JarvisAppleSlice/musiclibrarymanager.git",
-		description: "ASP.NET Core + EF Core CRUD app.",
-		viewAt: "View Project",
-	},
 ];
 
 const inProgressProjects = [
+	{
+		title: "Music Management App",
+		url: "https://github.com/JarvisAppleSlice/musiclibrarymanager.git",
+		description:
+			"Razor pages App with login/registration, song, album, and artist creation and storage.",
+		viewAt: "View on GitHub",
+	},
 	{
 		title: "Udemy HTML Project",
 		url: "https://github.com/JarvisAppleSlice/html-portfolio.git",
 		description:
 			"Intro HTML/CSS/JS project. including a birthday card/ invite and a Favorite movies section with linked URLs.",
-		viewAt: "View Project",
+		viewAt: "View on GitHub",
 	},
 	{
 		title: "Resume App",
