@@ -32,12 +32,6 @@ const projects = [
 		viewAt: "View Project",
 	},
 	{
-		title: "Resume App",
-		url: "https://github.com/JarvisAppleSlice/Resume-App.git",
-		description: "Intro C# app.",
-		viewAt: "View Project",
-	},
-	{
 		title: "Music Management App",
 		url: "https://github.com/JarvisAppleSlice/musiclibrarymanager.git",
 		description: "ASP.NET Core + EF Core CRUD app.",
@@ -49,6 +43,12 @@ const inProgressProjects = [
 	{
 		title: "Birthday Card",
 		description: "HTML/CSS interactive card project with animation effects.",
+	},
+	{
+		title: "Resume App",
+		url: "https://github.com/JarvisAppleSlice/Resume-App.git",
+		description: "Intro C# app.",
+		viewAt: "View Project",
 	},
 	{
 		title: "Favorite Movies",
