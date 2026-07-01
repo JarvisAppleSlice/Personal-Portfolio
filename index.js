@@ -1,7 +1,7 @@
 const projects = [
 	{
 		title: "React Recipe Database App",
-		url: "https://react-final-chi-one.vercel.app/",
+		url: "https://recipe-db-three.vercel.app/",
 		description:
 			"React app with Registration/Login, Recipe creation and storage, verification and integrated database. Hosted through Vercel",
 		viewAt: "View Project",
@@ -45,10 +45,23 @@ const projects = [
 	},
 ];
 
-const container = document.getElementById("dragon");
+const inProgressProjects = [
+	{
+		title: "Birthday Card",
+		description: "HTML/CSS interactive card project with animation effects.",
+	},
+	{
+		title: "Favorite Movies",
+		description: "Movie listing app with IMDB links and filtering.",
+	},
+];
 
-if (container) {
-	projects.forEach((p) => {
+function renderProjects(containerId, list) {
+	const container = document.getElementById(containerId);
+
+	if (!container) return;
+
+	list.forEach((p) => {
 		const card = document.createElement("div");
 		card.classList.add("project-item");
 
@@ -62,24 +75,31 @@ if (container) {
 		const desc = document.createElement("p");
 		desc.textContent = p.description;
 
-		const link = document.createElement("a");
-		link.href = p.url;
-		link.target = "_blank";
-		link.classList.add("project-link");
-		link.textContent = p.viewAt;
-
 		details.appendChild(desc);
-		details.appendChild(link);
+
+		// Only add link if it exists (for in-progress items)
+		if (p.url) {
+			const link = document.createElement("a");
+			link.href = p.url;
+			link.target = "_blank";
+			link.classList.add("project-link");
+			link.textContent = p.viewAt || "View";
+			details.appendChild(link);
+		}
 
 		card.appendChild(title);
 		card.appendChild(details);
 		container.appendChild(card);
 
+		// accordion toggle
 		title.addEventListener("click", () => {
 			card.classList.toggle("active");
 		});
 	});
 }
+
+renderProjects("dragon", projects);
+renderProjects("in-progress", inProgressProjects);
 
 // Clean references
 const refList = document.getElementById("references-list");
