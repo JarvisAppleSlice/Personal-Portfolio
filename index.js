@@ -1,5 +1,19 @@
 const projects = [
 	{
+		title: "React Recipe Database App",
+		url: "https://react-final-chi-one.vercel.app/",
+		description:
+			"React app with Registration/Login, Recipe creation and storage, verification and integrated database. Hosted through Vercel",
+		viewAt: "View Project",
+	},
+	{
+		title: "React Portfolio App",
+		url: "https://react-final-chi-one.vercel.app/",
+		description:
+			"React app with Registration/Login, basic messaging, verification and article sharing. Hosted through Vercel",
+		viewAt: "View Project",
+	},
+	{
 		title: "Udemy HTML Project",
 		url: "https://github.com/JarvisAppleSlice/html-portfolio.git",
 		description: "Intro HTML/CSS/JS project.",

@@ -1,4 +1,7 @@
 using System.Net.Http;
+using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 using Microsoft.Azure.Functions.Worker;
@@ -27,10 +30,25 @@ public class Contact
 
         var data = await req.ReadFromJsonAsync<ContactRequest>();
 
-        if (data == null || string.IsNullOrWhiteSpace(data.Email))
+        if (data == null)
         {
             var bad = req.CreateResponse(System.Net.HttpStatusCode.BadRequest);
-            await bad.WriteStringAsync("Invalid request");
+            await bad.WriteStringAsync("Invalid request.");
+            return bad;
+        }
+
+        var validationContext = new ValidationContext(data);
+        var validationResults = new List<ValidationResult>();
+
+        if (!Validator.TryValidateObject(data, validationContext, validationResults, true))
+        {
+            var bad = req.CreateResponse(System.Net.HttpStatusCode.BadRequest);
+
+            await bad.WriteAsJsonAsync(new
+            {
+                errors = validationResults.Select(v => v.ErrorMessage)
+            });
+
             return bad;
         }
 
@@ -42,8 +60,17 @@ public class Contact
 
         var apiKey = Environment.GetEnvironmentVariable("RESEND_API_KEY");
 
-        _logger.LogInformation($"RESEND KEY LOADED: {!string.IsNullOrWhiteSpace(apiKey)}");
-        _logger.LogInformation($"RESEND KEY VALUE: {apiKey}");
+        if (string.IsNullOrWhiteSpace(apiKey))
+        {
+            _logger.LogError("RESEND_API_KEY is missing.");
+
+            var error = req.CreateResponse(System.Net.HttpStatusCode.InternalServerError);
+            await error.WriteStringAsync("Server configuration error.");
+
+            return error;
+        }
+
+        _logger.LogInformation("RESEND_API_KEY successfully loaded.");
 
         var emailPayload = new
         {
@@ -70,6 +97,16 @@ public class Contact
         var responseBody = await responseResend.Content.ReadAsStringAsync();
         _logger.LogInformation($"RESEND STATUS: {responseResend.StatusCode}");
         _logger.LogInformation($"RESEND RESPONSE: {responseBody}");
+
+        if (!responseResend.IsSuccessStatusCode)
+        {
+            _logger.LogError("Failed to send email: {Response}", responseBody);
+
+            var error = req.CreateResponse(System.Net.HttpStatusCode.BadGateway);
+            await error.WriteStringAsync("Failed to send email.");
+
+            return error;
+        }
 
         // =========================
         // RESPONSE
