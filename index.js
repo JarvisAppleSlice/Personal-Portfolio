@@ -14,10 +14,26 @@ const projects = [
 		viewAt: "View Project",
 	},
 	{
+		title: "Music Management App",
+		url: "https://github.com/JarvisAppleSlice/musiclibrarymanager.git",
+		description: "ASP.NET Core + EF Core CRUD app.",
+		viewAt: "View Project",
+	},
+];
+
+const inProgressProjects = [
+	{
 		title: "Udemy HTML Project",
 		url: "https://github.com/JarvisAppleSlice/html-portfolio.git",
-		description: "Intro HTML/CSS/JS project.",
+		description:
+			"Intro HTML/CSS/JS project. including a birthday card/ invite and a Favorite movies section with linked URLs.",
 		viewAt: "View Project",
+	},
+	{
+		title: "Resume App",
+		url: "https://github.com/JarvisAppleSlice/Resume-App.git",
+		description: "Intro C# app.",
+		viewAt: "View on GitHub",
 	},
 	{
 		title: "Static Web App",
@@ -28,31 +44,9 @@ const projects = [
 	{
 		title: "Weather App",
 		url: "https://github.com/JarvisAppleSlice/Weather-App.git",
-		description: "API-based weather app.",
+		description:
+			"API-based weather app. Created through course work at Bridgerland Applied Technology College",
 		viewAt: "View Project",
-	},
-	{
-		title: "Music Management App",
-		url: "https://github.com/JarvisAppleSlice/musiclibrarymanager.git",
-		description: "ASP.NET Core + EF Core CRUD app.",
-		viewAt: "View Project",
-	},
-];
-
-const inProgressProjects = [
-	{
-		title: "Birthday Card",
-		description: "HTML/CSS interactive card project with animation effects.",
-	},
-	{
-		title: "Resume App",
-		url: "https://github.com/JarvisAppleSlice/Resume-App.git",
-		description: "Intro C# app.",
-		viewAt: "View Project",
-	},
-	{
-		title: "Favorite Movies",
-		description: "Movie listing app with IMDB links and filtering.",
 	},
 ];
 
